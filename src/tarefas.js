@@ -17,7 +17,7 @@ class Tarefas {
   }
 
   todas() {
-
+    return this.lista;
   }
 
   marcarConcluida(indice) {
