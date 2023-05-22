@@ -13,7 +13,7 @@ class Tarefas {
   }
 
   remover(indice) {
-
+    this.lista.splice(indice);
   }
 
   todas() {
