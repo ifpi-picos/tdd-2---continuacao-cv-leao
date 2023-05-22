@@ -6,7 +6,11 @@ const Tarefas = require('./tarefas');
 const tarefas = new Tarefas();
 
 app.post('/tarefas', (req, res) => {
+    const { descricao } = req.body;
 
+    tarefas.adicionar(descricao);
+
+    res.status(201).send("Tarefa adicionada com sucesso!");
 });
 
 app.delete('/tarefas/:indice', (req, res) => {
