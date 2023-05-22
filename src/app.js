@@ -22,7 +22,9 @@ app.delete('/tarefas/:indice', (req, res) => {
 });
 
 app.get('/tarefas', (req, res) => {
+    const tasks = tarefas.todas();
 
+    res.status(200).send(tasks);
 });
 
 app.patch('/tarefas/:indice', (req, res) => {
