@@ -28,7 +28,11 @@ app.get('/tarefas', (req, res) => {
 });
 
 app.patch('/tarefas/:indice', (req, res) => {
+    const { indice } = req.params;
 
+    tarefas.marcarConcluida(indice);
+
+    res.status(200).send("Tarefa marcada como concluída!");
 });
 
 module.exports = app;
