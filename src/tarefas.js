@@ -21,7 +21,7 @@ class Tarefas {
   }
 
   marcarConcluida(indice) {
-
+    this.lista[indice].concluida = true;
   }
 }
 
