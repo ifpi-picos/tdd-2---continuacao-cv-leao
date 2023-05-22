@@ -14,7 +14,11 @@ app.post('/tarefas', (req, res) => {
 });
 
 app.delete('/tarefas/:indice', (req, res) => {
+    const { indice } = req.params;
 
+    tarefas.remover(indice);
+
+    res.status(200).send("Tarefa removida com sucesso!");
 });
 
 app.get('/tarefas', (req, res) => {
